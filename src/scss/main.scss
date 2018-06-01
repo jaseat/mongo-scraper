@@ -43,14 +43,21 @@ a {
 }
 
 .top-bar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   background-color: #ccc;
   height: 38px;
+  grid-template-columns: 25% auto 20% 20%;
   span {
     font-size: 32px;
     margin-left: 12px;
     cursor: pointer;
+    justify-self: start;
+    grid-column: 1 / 2;
+  }
+  a {
+    justify-self: end;
+    grid-column: 3 / 4;
+    font-size: 30px;
   }
   button {
     background-color: rgb(126, 0, 0);
@@ -63,6 +70,8 @@ a {
     font-size: 16px;
     margin-right: 32px;
     cursor: pointer;
+    justify-self: end;
+    grid-column: 4 / 5;
   }
   margin-bottom: 20px;
   border-bottom: solid #555 1px;
