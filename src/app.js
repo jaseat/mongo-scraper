@@ -16,7 +16,7 @@ app.use(logger('tiny'));
 app.engine('handlebars', exphbs({
   defaultLayout: 'main',
   layoutsDir: path.join(__dirname, 'views/layouts'),
-  partialsDir:'server/views/partials',
+  partialsDir:path.join(__dirname, 'views/partials'),
 }));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));

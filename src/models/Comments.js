@@ -9,6 +9,7 @@ var commentSchema = new Schema({
   email: {
     type: String,
     required: false,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
   },
   body: {
     type: String,
