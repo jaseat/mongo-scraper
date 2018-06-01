@@ -9,12 +9,16 @@ var commentSchema = new Schema({
   email: {
     type: String,
     required: false,
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
+    // match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
   },
   body: {
     type: String,
     required: true,
   },
+  posted: {
+    type: Date,
+    default: Date.now(),
+  }
 });
 
 module.exports = commentSchema;

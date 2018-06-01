@@ -1,0 +1,20 @@
+{{> topbar}}
+
+{{!-- <div class="article-container" id={{_id}}>
+  <h1><a href="/{{_id}}">{{headline}}</a></h1>
+  <a class="img" href="/{{_id}}"><img src={{image}} alt={{source}}></a>
+  <p>{{summary}}</p>
+  <a class="link" href="{{url}}">Read More...</a>
+</div> --}}
+
+<h1>{{headline}}</h1>
+<img src="{{image}}" alt="{{source}}">
+<p>{{summary}}</p>
+<a class="link" href="{{url}}">Read More...</a>
+
+<h2>Comments</h2>
+{{#each comments}}
+  {{> commentContainer this}}
+{{/each}}
+
+{{> form}}
